@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+<tr th:each="user : ${list}">
+    <td th:if="${user.age} < 20" th:text="'사용자의 나이가 20살 보다 어립니다.'"></td>
+    <td th:text="${user.username}"></td>
+    <td th:text="${user.age}"></td>
+    <td>
+        userStat.index : <span th:text="${userStat.index}"></span>
+        userStat.count : <span th:text="${userStat.count}"></span>
+        userStat.current : <span th:text="${userStat.current}"></span>
+        userStat.first : <span th:text="${userStat.first}"></span>
+        userStat.size : <span th:text="${userStat.size}"></span>
+    </td>
+</tr>
+</table>
+</body>
+</html>
